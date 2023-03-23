@@ -107,7 +107,7 @@
     font-family: serif;
     text-align: center;
     padding-left: 5px;
-    padding-top: 120px;
+    padding-top: 140px;
 }
 
 #mid_section{
@@ -127,7 +127,7 @@ p{
 }
 
 #bottom_first_image{
-    width: 55%;
+    width: 50%;
     padding-top: 200px;
 }
 
@@ -137,6 +137,10 @@ p{
 }
 
 #bottom_third_image{
-    width: 60%;
+    width: 30%;
+}
+
+#ourTeam{
+    padding-top: 50px;
 }
 
