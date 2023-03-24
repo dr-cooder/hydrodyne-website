@@ -28,6 +28,10 @@
     padding: 24px;
 }
 
+.logo_nav_flex_solid {
+    background-color: gray;
+}
+
 #logo_img {
     height: 65px;
     margin-left: 10px;
@@ -55,6 +59,7 @@
 
 #nav_items > li > a {
     color: white;
+    font-weight: bold;
 }
 
 .left_body {
