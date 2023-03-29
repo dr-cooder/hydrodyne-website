@@ -15,7 +15,7 @@
     z-index: 100;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.333);
+    background-color: rgba(0, 0, 0, 0.333);
     display: flex;
     flex-direction: column;
 }
@@ -28,8 +28,14 @@
     padding: 24px;
 }
 
-.logo_nav_flex_solid {
+.solid_header {
     background-color: gray;
+}
+
+.solid_header>h1 {
+    color: white;
+    padding-bottom: 2rem;
+    text-align: center;
 }
 
 #logo_img {
@@ -53,13 +59,27 @@
     padding: 0;
 }
 
-#nav_items > li {
+#nav_items>li {
     padding: 12px 20px;
 }
 
-#nav_items > li > a {
+#nav_items>li>a {
     color: white;
     font-weight: bold;
+}
+
+.text_section {
+    padding: 1rem 0;
+}
+
+.text_section > p, .text_section > ul, .text_section > ol {
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: justify;
+}
+
+h2 {
+    text-align: center;
 }
 
 .left_body {
@@ -102,12 +122,12 @@
 
 }
 
-#middle_image{
+#middle_image {
     width: 300px;
     height: 200px;
 }
 
-#font_body_font{
+#font_body_font {
     font-size: 40px;
     font-family: serif;
     text-align: center;
@@ -115,37 +135,121 @@
     padding-top: 140px;
 }
 
-#mid_section{
+#mid_section {
     padding-top: -500px;
 }
 
-p{
+p {
+    font-size: 1.25rem;
     font-family: serif;
 }
 
-.body{
+.body {
     border: 5px solid black;
 }
 
-#bottom_left{
+#bottom_left {
     border: 10px solid black;
 }
 
-#bottom_first_image{
+#bottom_first_image {
     width: 50%;
     padding-top: 200px;
 }
 
-#bottom_second_image{
+#bottom_second_image {
     width: 40%;
     padding-top: 200px;
 }
 
-#bottom_third_image{
+#bottom_third_image {
     width: 30%;
 }
 
-#ourTeam{
+#ourTeam {
     padding-top: 50px;
 }
 
+/* About page */
+
+#about_team_list {
+    display: flex;
+    column-gap: 100px;
+    row-gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 50px;
+}
+
+.about_team_item {
+    max-width: 400px;
+}
+
+.about_team_item>img {
+    width: 100%;
+}
+
+.about_team_item>h3 {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.about_team_item>p {
+    text-align: justify;
+}
+
+/* Products page */
+
+#product_list {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.product_item {
+    display: flex;
+    column-gap: 50px;
+    align-items: center;
+}
+
+.product_item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.product_item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.product_image_column {
+    width: 400px;
+    flex-shrink: 0;
+}
+
+.product_image_column>img {
+    width: 100%;
+}
+
+.product_stats {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: lightgray;
+}
+
+.product_stats>ul {
+    margin-bottom: 0;
+}
+
+/*
+.product_item:nth-child(odd) > .product_description_column > h3 {
+    text-align: left;
+}
+
+.product_item:nth-child(even) > .product_description_column > h3 {
+    text-align: right;
+}
+*/
+
+.product_description_column>p {
+    text-align: justify;
+}
