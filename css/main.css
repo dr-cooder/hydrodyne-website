@@ -76,19 +76,13 @@
     height: 600px;
     margin: 10px;
     float: right;
+    padding-top: 300px;
 }
 
 .left_bottom {
     width: 50%;
     height: 600px;
     float: left;
-    margin-top: 50px;
-}
-
-.right_bottom {
-    width: 50%;
-    height: 600px;
-    float: right;
     margin-top: 50px;
 }
 
@@ -131,21 +125,35 @@ p{
     border: 10px solid black;
 }
 
-#bottom_first_image{
-    width: 50%;
-    padding-top: 200px;
-}
-
-#bottom_second_image{
-    width: 40%;
-    padding-top: 200px;
-}
-
-#bottom_third_image{
+#miko{
     width: 30%;
+    /*padding-top: 200px;*/
+    border-radius: 50%;
+}
+
+#nate{
+    width: 30%;
+    /*padding-top: 200px;*/
+    border-radius: 50%;
+}
+
+#rich{
+    width: 30%;
+    border-radius: 50%;
+}
+
+.right_bottom {
+    width: 50%;
+    height: 600px;
+    float: right;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 #ourTeam{
     padding-top: 50px;
 }
+
 
