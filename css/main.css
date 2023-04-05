@@ -43,6 +43,10 @@
     margin-left: 10px;
 }
 
+.mid{
+    margin-top: -100px;
+}
+
 #hero_text {
     flex-grow: 1;
     padding: 0 20%;
@@ -96,7 +100,7 @@ h2 {
     height: 600px;
     margin: 10px;
     float: right;
-    padding-top: 300px;
+    padding-top: 50px;
 }
 
 .left_bottom {
@@ -130,7 +134,7 @@ h2 {
 }
 
 #mid_section {
-    padding-top: -500px;
+    padding-top: 500px;
 }
 
 p {
