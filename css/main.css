@@ -4,6 +4,13 @@
 
 body {
     font-family: "Sarabun", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
 }
 
 h1, h2 {
@@ -11,7 +18,11 @@ h1, h2 {
     text-transform: uppercase;
 }
 
-#homepage_buttons>a, #nav_items>li>a {
+h3 {
+    font-size: 1.75rem;
+}
+
+#homepage_buttons>a, #nav_items>li>a, #main_article_tile_text a {
     font-family: "Chivo Mono", monospace;
     text-transform: uppercase;
 }
@@ -141,7 +152,7 @@ h2 {
     margin: 2rem auto;
 }
 
-#homepage_buttons>a {
+#homepage_buttons>a, #main_article_tile_text a {
     color: var(--bs-body-color);
     text-decoration: none;
     display: flex;
@@ -152,7 +163,7 @@ h2 {
     transition: 0.25s;
 }
 
-#homepage_buttons>a:hover {
+#homepage_buttons>a:hover, #main_article_tile_text a:hover {
     background-color: #68cdeb;
 }
 
@@ -321,21 +332,89 @@ p, li, footer {
     margin: 0 auto;
 }
 
+#main_article_tile, #secondary_article_tiles {
+    margin-bottom: 2rem;
+}
+
 #main_article_tile {
     display: flex;
     align-items: center;
+    margin-top: 2rem;
 }
 
 #main_article_tile_image {
-    max-width: 500px;
+    width: 500px;
 }
 
 #main_article_tile_text {
     padding-left: 25px;
 }
 
+#main_article_tile_text p {
+    margin-bottom: 0;
+}
+
 #main_article_tile_text h3 {
     font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#main_article_tile_text a {
+    max-width: fit-content;
+    padding: 1rem 2rem;
+}
+
+#secondary_article_tiles {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#secondary_article_tiles > a {
+    text-decoration: none;
+    color: var(--bs-body-color);
+    border-radius: 5px;
+    outline: solid 2px #68cdeb;
+    padding: 1.5rem;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#secondary_article_tiles > a:hover h3 {
+    color: #68cdeb;
+}
+
+#secondary_article_tiles > a > p {
+    margin: 0;
+}
+
+@media screen and (max-width: 1300px) {
+    #articles_list {
+        max-width: 640px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #main_article_tile {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #main_article_tile_image {
+        width: 100%;
+    }
+
+    #main_article_tile_text {
+        padding-left: 0;
+        padding-top: 1rem;
+    }
+
+    #secondary_article_tiles {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
 }
 
 /* Phone screen general */
