@@ -13,7 +13,7 @@ main {
     flex-grow: 1;
 }
 
-h1, h2 {
+#hero_text>h1, .solid_header>h1, h2:not(.article_subheader) {
     font-family: "Bebas Neue", monospace;
     text-transform: uppercase;
 }
@@ -22,7 +22,7 @@ h3 {
     font-size: 1.75rem;
 }
 
-#homepage_buttons>a, #nav_items>li>a, #main_article_tile_text a {
+#homepage_buttons>a, #nav_items>li>a, .link_button {
     font-family: "Chivo Mono", monospace;
     text-transform: uppercase;
 }
@@ -133,14 +133,14 @@ footer {
     padding: 1rem 0;
 }
 
-.text_section>p, .text_section>ul, .text_section>ol {
+.text_section>*:not(#about_team_list, #product_list, .back_to_news) {
     margin-left: 20%;
     margin-right: 20%;
     text-align: justify;
 }
 
-h2 {
-    text-align: center;
+.text_section>h1, .text_section>h2, #article_page_date {
+    text-align: center !important;
 }
 
 #homepage_buttons {
@@ -152,7 +152,7 @@ h2 {
     margin: 2rem auto;
 }
 
-#homepage_buttons>a, #main_article_tile_text a {
+#homepage_buttons>a, .link_button {
     color: var(--bs-body-color);
     text-decoration: none;
     display: flex;
@@ -163,7 +163,7 @@ h2 {
     transition: 0.25s;
 }
 
-#homepage_buttons>a:hover, #main_article_tile_text a:hover {
+#homepage_buttons>a:hover, .link_button:hover {
     background-color: #68cdeb;
 }
 
@@ -359,7 +359,7 @@ p, li, footer {
     margin-bottom: 2rem;
 }
 
-#main_article_tile_text a {
+.link_button {
     max-width: fit-content;
     padding: 1rem 2rem;
 }
@@ -417,6 +417,28 @@ p, li, footer {
     
 }
 
+/* News article */
+
+#article_header {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.article_image {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.interview {
+    background-color: #EEE;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.back_to_news {
+    margin: 1rem auto;
+}
+
 /* Phone screen general */
 
 @media screen and (max-width: 600px) {
@@ -441,7 +463,7 @@ p, li, footer {
         padding: 0;
     }
 
-    .text_section>p, .text_section>ul, .text_section>ol {
+    .text_section>*:not(#about_team_list, #product_list, .back_to_news) {
         margin-left: 0;
         margin-right: 0;
         padding-left: 20px;
