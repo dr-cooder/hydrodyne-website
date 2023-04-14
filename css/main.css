@@ -2,6 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
 
+.ratio_16x9 {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.ratio_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .hint {
     font-weight: bold;
 }
@@ -260,9 +275,14 @@ p, li, footer {
 
 /* Products page */
 
+#video_container {
+    position: relative;
+    margin: 1rem 0;
+}
+
 #product_list {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 3rem auto 2rem;
     display: flex;
     flex-direction: column;
 }
